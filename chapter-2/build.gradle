@@ -1,0 +1,28 @@
+// build.gradle configures Project object instance, which, when executed, actually executes the tasks
+// according to the provided configuration
+
+// 'java' plugin adds tasks specific to Java projects
+apply plugin: 'java'
+
+group 'test.test.test' // project group
+version '1.0-SNAPSHOT' // project version - i.e. becomes part of jar file name
+
+// by convention 'java' plugin expects Java sources to be organized in pre-defined project structure:
+// /src
+//     /main
+//         /java
+//         /resources
+//     /test
+//         /java
+//         /resources
+// (can be changed by explicitly providing sourceSets)
+
+// which dependencies to get
+dependencies {
+    compile 'com.google.code.gson:gson:2.8.2'
+}
+
+// where to get dependencies
+repositories {
+    mavenCentral()
+}
