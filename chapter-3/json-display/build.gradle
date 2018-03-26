@@ -1,0 +1,7 @@
+group 'test.test.test'
+version '1.0-SNAPSHOT'
+apply plugin: 'java'
+apply plugin: 'project-report'
+repositories {mavenCentral()}
+dependencies {compile 'com.google.code.gson:gson:2.8.2'}
+
