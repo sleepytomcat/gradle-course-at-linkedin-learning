@@ -1,0 +1,10 @@
+task printHelloWorld {
+    doLast {println 'Hello, world!'}
+}
+
+task showDate {
+    group = 'Date and Time utils'
+    description = 'Show current date and time'
+    doLast {println 'Current date is ' + new Date()}
+    dependsOn printHelloWorld
+}

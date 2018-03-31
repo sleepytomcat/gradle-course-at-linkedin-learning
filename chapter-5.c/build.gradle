@@ -1,0 +1,13 @@
+// declaring a new task type
+class ShowDateTime extends DefaultTask {
+    String message = 'Time is '
+    @TaskAction // provided by Gradle
+    void output() {
+	println message + new Date();
+    }
+}
+
+// creating an instance of a task while customizing it at the same time
+task customShowDateTime(type: ShowDateTime) {
+    message = "Custom Time is "
+}

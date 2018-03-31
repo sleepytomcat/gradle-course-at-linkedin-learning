@@ -1,0 +1,17 @@
+task printHelloWorld {
+    doLast {println 'Hello, world!'}
+}
+
+// declaring a new task type
+class ShowDateTime extends DefaultTask {
+    String message = 'Time is '
+    @TaskAction // provided by Gradle
+    void output() {
+	println message + new Date();
+    }
+}
+
+// creating an instance of a task
+task showDateTime(type: ShowDateTime)
+// adding a task dependency
+showDateTime.dependsOn printHelloWorld
