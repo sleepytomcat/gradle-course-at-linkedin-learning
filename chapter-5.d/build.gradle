@@ -1,0 +1,9 @@
+// adding a dependency for this build script (not a project)
+buildscript {
+    dependencies {
+	classpath files('showdate-gradle-plugin/build/libs/showdate-gradle-plugin-1.0-SNAPSHOT.jar')
+    }
+}
+
+// now as the plugin is 'linked' with the code above, let's actually apply our custom plugin:
+apply plugin: 'show-date-plugin'

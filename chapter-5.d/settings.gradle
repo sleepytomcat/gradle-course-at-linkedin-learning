@@ -1,0 +1,2 @@
+// referencing our sub-project, which is gradle plugin
+include 'showdate-gradle-plugin'

@@ -1,0 +1,4 @@
+// providing settings.gradle allows to build this sub-project independently
+// (otherwise it's not possible to build it without root project, which requires this plugin
+// built first - which is endless dependency loop)
+rootProject.name = 'showdate-gradle-plugin'
